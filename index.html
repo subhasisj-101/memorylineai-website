@@ -1728,6 +1728,21 @@ footer {
 /* ── MOBILE RESPONSIVE ── */
 @media (max-width: 768px) {
 
+  /* FIX SCROLL REVEAL — force all hidden elements visible on mobile */
+  .scroll-reveal {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+
+  /* FIX MARQUEE TICKER overflow */
+  .marquee-wrap {
+    overflow: hidden !important;
+  }
+  .marquee-item {
+    font-size: 0.75rem !important;
+    padding: 0 1rem !important;
+  }
+
   /* NAV */
   nav {
     padding: 0.9rem 4%;
