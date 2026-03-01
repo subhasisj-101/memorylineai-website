@@ -1709,8 +1709,8 @@ footer {
 }
 
 .scroll-reveal {
-  opacity: 0;
-  transform: translateY(32px);
+  opacity: 1;
+  transform: translateY(0);
   transition: opacity 0.65s ease, transform 0.65s ease;
 }
 
@@ -1727,21 +1727,6 @@ footer {
 
 /* ── MOBILE RESPONSIVE ── */
 @media (max-width: 768px) {
-
-  /* FIX SCROLL REVEAL — force all hidden elements visible on mobile */
-  .scroll-reveal {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-  }
-
-  /* FIX MARQUEE TICKER overflow */
-  .marquee-wrap {
-    overflow: hidden !important;
-  }
-  .marquee-item {
-    font-size: 0.75rem !important;
-    padding: 0 1rem !important;
-  }
 
   /* NAV */
   nav {
@@ -2488,7 +2473,7 @@ footer {
     <div class="contact-meta">
       <div class="meta-item">
         <div class="meta-label">Email</div>
-        <div class="meta-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5139343d3d3e113c343c3e23283d383f3430387f323e3c">[email&#160;protected]</a></div>
+        <div class="meta-val"><a href="mailto:subhasisj@memorylineai.com">subhasisj@memorylineai.com</a></div>
       </div>
       <div class="meta-item">
         <div class="meta-label">Based In</div>
@@ -2510,12 +2495,12 @@ footer {
     <li><a href="#for-students">Students</a></li>
     <li><a href="#for-schools">Schools</a></li>
     <li><a href="#pricing">Pricing</a></li>
-    <li><a href="/cdn-cgi/l/email-protection#ec8489808083ac818981839e95808582898d85c28f8381">Contact</a></li>
+    <li><a href="mailto:subhasisj@memorylineai.com">Contact</a></li>
   </ul>
   <div class="footer-copy">© 2026 MemoryLineAI · Bhubaneswar, Odisha · Built for India</div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // Nav shadow on scroll
 window.addEventListener('scroll', () => {
   document.getElementById('main-nav').style.boxShadow =
@@ -2527,7 +2512,12 @@ const observer = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) e.target.classList.add('visible');
   });
-}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+}, { threshold: 0, rootMargin: '0px 0px 0px 0px' });
+
+// Fallback: reveal all elements after 1.5s in case observer fails
+setTimeout(() => {
+  document.querySelectorAll('.scroll-reveal').forEach(el => el.classList.add('visible'));
+}, 1500);
 
 document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
 
