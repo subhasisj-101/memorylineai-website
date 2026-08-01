@@ -9,20 +9,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --deep: #0f0a1e;
-  --deep-2: #1a1035;
-  --violet: #7c3aed;
-  --violet-mid: #9d5cf6;
-  --violet-soft: #f5f0ff;
-  --violet-border: #e2d4fc;
-  --violet-glow: rgba(124,58,237,0.15);
-  --accent: #f97316;
-  --accent-gold: #f59e0b;
+  --deep: #0B1220;
+  --deep-2: #12203A;
+  --violet: #1C4E6B;
+  --violet-mid: #2E6E92;
+  --violet-soft: #EEF4F7;
+  --violet-border: #D5E3EA;
+  --violet-glow: rgba(28,78,107,0.15);
+  --accent: #E8A33D;
+  --accent-gold: #D98A2B;
   --white: #ffffff;
-  --off-white: #faf9ff;
-  --text: #1e1533;
-  --text-mid: #4a3f6b;
-  --text-soft: #8b7fa8;
+  --off-white: #F6F8FA;
+  --text: #16202E;
+  --text-mid: #45566B;
+  --text-soft: #7A8AA0;
   --border: #ede8f8;
   --success: #10b981;
   --card: #ffffff;
@@ -127,9 +127,9 @@ nav {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 50% 30%, rgba(124,58,237,0.07) 0%, transparent 65%),
+    radial-gradient(ellipse 80% 60% at 50% 30%, rgba(28,78,107,0.07) 0%, transparent 65%),
     radial-gradient(ellipse 50% 40% at 20% 80%, rgba(249,115,22,0.05) 0%, transparent 50%),
-    radial-gradient(ellipse 40% 50% at 80% 70%, rgba(157,92,246,0.05) 0%, transparent 55%);
+    radial-gradient(ellipse 40% 50% at 80% 70%, rgba(46,110,146,0.05) 0%, transparent 55%);
 }
 
 /* Subtle grid */
@@ -138,8 +138,8 @@ nav {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(124,58,237,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(124,58,237,0.03) 1px, transparent 1px);
+    linear-gradient(rgba(28,78,107,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(28,78,107,0.03) 1px, transparent 1px);
   background-size: 80px 80px;
   mask-image: radial-gradient(ellipse 90% 90% at 50% 50%, black 30%, transparent 100%);
 }
@@ -233,7 +233,7 @@ nav {
   align-items: center;
   gap: 0.5rem;
   transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
-  box-shadow: 0 6px 24px rgba(124,58,237,0.3);
+  box-shadow: 0 6px 24px rgba(28,78,107,0.3);
   font-family: 'Outfit', sans-serif;
   border: none;
   cursor: pointer;
@@ -241,7 +241,7 @@ nav {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 32px rgba(124,58,237,0.4);
+  box-shadow: 0 10px 32px rgba(28,78,107,0.4);
   background: var(--violet-mid);
 }
 
@@ -364,8 +364,8 @@ nav {
 }
 
 .chat-board-badge {
-  background: rgba(124,58,237,0.2);
-  border: 1px solid rgba(124,58,237,0.3);
+  background: rgba(28,78,107,0.2);
+  border: 1px solid rgba(28,78,107,0.3);
   color: #c4b5fd;
   font-size: 0.6rem;
   font-weight: 700;
@@ -392,9 +392,9 @@ nav {
 }
 
 .msg-vidya {
-  background: rgba(124,58,237,0.12);
-  border: 1px solid rgba(124,58,237,0.2);
-  color: #e2d4fc;
+  background: rgba(28,78,107,0.12);
+  border: 1px solid rgba(28,78,107,0.2);
+  color: #D5E3EA;
   border-bottom-left-radius: 4px;
   align-self: flex-start;
   text-align: left;
@@ -413,8 +413,8 @@ nav {
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
-  background: rgba(124,58,237,0.15);
-  border: 1px solid rgba(124,58,237,0.25);
+  background: rgba(28,78,107,0.15);
+  border: 1px solid rgba(28,78,107,0.25);
   color: #a78bfa;
   font-size: 0.55rem;
   font-weight: 700;
@@ -429,8 +429,8 @@ nav {
   display: flex;
   gap: 4px;
   padding: 0.8rem 1rem;
-  background: rgba(124,58,237,0.08);
-  border: 1px solid rgba(124,58,237,0.15);
+  background: rgba(28,78,107,0.08);
+  border: 1px solid rgba(28,78,107,0.15);
   border-radius: 16px;
   border-bottom-left-radius: 4px;
   width: fit-content;
@@ -438,7 +438,7 @@ nav {
 
 .typing span {
   width: 6px; height: 6px;
-  background: rgba(124,58,237,0.5);
+  background: rgba(28,78,107,0.5);
   border-radius: 50%;
   animation: bounce 1.2s ease-in-out infinite;
 }
@@ -676,8 +676,8 @@ nav {
 
 /* Solution statement */
 .solution-statement {
-  background: rgba(124,58,237,0.08);
-  border: 1px solid rgba(124,58,237,0.2);
+  background: rgba(28,78,107,0.08);
+  border: 1px solid rgba(28,78,107,0.2);
   border-radius: 28px;
   padding: 3rem;
 }
@@ -849,8 +849,8 @@ section { padding: 7rem 5%; }
 }
 
 .gap-card:hover {
-  background: rgba(124,58,237,0.08);
-  border-color: rgba(124,58,237,0.25);
+  background: rgba(28,78,107,0.08);
+  border-color: rgba(28,78,107,0.25);
   transform: translateY(-3px);
 }
 
@@ -912,7 +912,7 @@ section { padding: 7rem 5%; }
   font-size: 1.1rem;
   color: white;
   margin: 0 auto 1.8rem;
-  box-shadow: 0 4px 20px rgba(124,58,237,0.3);
+  box-shadow: 0 4px 20px rgba(28,78,107,0.3);
   position: relative;
   z-index: 2;
 }
@@ -994,7 +994,7 @@ section { padding: 7rem 5%; }
   justify-content: center;
   flex-shrink: 0;
   margin-top: 0.1rem;
-  background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4l2.5 2.5L9 1' stroke='%237c3aed' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4l2.5 2.5L9 1' stroke='%231C4E6B' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1012,7 +1012,7 @@ section { padding: 7rem 5%; }
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 70% 20%, rgba(124,58,237,0.18), transparent 60%);
+  background: radial-gradient(ellipse at 70% 20%, rgba(28,78,107,0.18), transparent 60%);
 }
 
 .panel-light {
@@ -1283,8 +1283,8 @@ section { padding: 7rem 5%; }
 }
 
 .sv-badge {
-  background: rgba(124,58,237,0.15);
-  border: 1px solid rgba(124,58,237,0.25);
+  background: rgba(28,78,107,0.15);
+  border: 1px solid rgba(28,78,107,0.25);
   color: #c4b5fd;
   font-size: 0.55rem;
   font-weight: 700;
@@ -1333,7 +1333,7 @@ section { padding: 7rem 5%; }
 .plan-toggle-btn.active {
   background: var(--violet);
   color: white;
-  box-shadow: 0 4px 16px rgba(124,58,237,0.4);
+  box-shadow: 0 4px 16px rgba(28,78,107,0.4);
 }
 
 .annual-save-badge {
@@ -1367,12 +1367,12 @@ section { padding: 7rem 5%; }
 
 .pricing-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(124,58,237,0.3);
+  border-color: rgba(28,78,107,0.3);
 }
 
 .pricing-card.featured {
-  background: linear-gradient(160deg, rgba(124,58,237,0.2), rgba(124,58,237,0.05));
-  border-color: rgba(124,58,237,0.4);
+  background: linear-gradient(160deg, rgba(28,78,107,0.2), rgba(28,78,107,0.05));
+  border-color: rgba(28,78,107,0.4);
   transform: scale(1.03);
 }
 
@@ -1501,19 +1501,19 @@ section { padding: 7rem 5%; }
 }
 
 .btn-price-outline:hover {
-  border-color: rgba(124,58,237,0.5) !important;
+  border-color: rgba(28,78,107,0.5) !important;
   color: white;
 }
 
 .btn-price-solid {
   background: var(--violet);
   color: white;
-  box-shadow: 0 4px 20px rgba(124,58,237,0.35);
+  box-shadow: 0 4px 20px rgba(28,78,107,0.35);
 }
 
 .btn-price-solid:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(124,58,237,0.45);
+  box-shadow: 0 8px 28px rgba(28,78,107,0.45);
 }
 
 /* Monthly prices hidden by default, annual shown */
@@ -1629,11 +1629,11 @@ body.monthly .annual-only::after { content: ' (Annual only)'; font-size: 0.6rem;
 .form-field::placeholder { color: rgba(255,255,255,0.25); }
 
 .form-field:focus {
-  border-color: rgba(124,58,237,0.5);
-  background: rgba(124,58,237,0.07);
+  border-color: rgba(28,78,107,0.5);
+  background: rgba(28,78,107,0.07);
 }
 
-.form-field option { background: #1a1035; }
+.form-field option { background: #12203A; }
 
 .contact-meta {
   display: flex;
@@ -1901,6 +1901,36 @@ footer {
     font-size: clamp(2.4rem, 5vw, 3.8rem);
   }
 }
+
+/* ── FLIGHT HERO (added) ── */
+#flight-hero{height:420vh;position:relative;background:var(--deep);}
+#flight-scene{position:sticky;top:0;height:100vh;width:100%;overflow:hidden;background:var(--deep);}
+#flight-scene canvas{display:block;}
+.fh-text{position:fixed;inset:0;z-index:3;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;padding:0 6%;
+  pointer-events:none;opacity:0;transition:opacity .5s ease;}
+.fh-text.show{opacity:1;}
+.fh-text.show .fh-actions a{pointer-events:auto;}
+.fh-eyebrow{font-family:'Outfit',sans-serif;font-size:.78rem;letter-spacing:.3em;
+  text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:1.1rem;}
+.fh-text h1{font-family:'Playfair Display',serif;font-weight:800;
+  font-size:clamp(2rem,6vw,4.6rem);line-height:1.03;color:var(--white);
+  max-width:16ch;letter-spacing:-.01em;margin:0;}
+.fh-text h1 em{font-style:italic;color:var(--accent);}
+.fh-text p{font-family:'Outfit',sans-serif;margin-top:1.3rem;
+  font-size:clamp(1rem,1.6vw,1.25rem);max-width:42ch;color:#c8cfdd;line-height:1.55;}
+.fh-actions{margin-top:2rem;display:flex;gap:.9rem;flex-wrap:wrap;justify-content:center;}
+.fh-actions a{font-family:'Outfit',sans-serif;text-decoration:none;font-weight:600;
+  font-size:1rem;padding:.9rem 1.6rem;border-radius:12px;}
+.fh-actions .p{background:var(--accent);color:#20160a;}
+.fh-actions .g{border:1px solid rgba(255,255,255,.28);color:var(--white);}
+#fh-hint{position:fixed;bottom:1.6rem;left:50%;transform:translateX(-50%);z-index:4;
+  font-family:'Outfit',sans-serif;font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;
+  color:#8a94a8;transition:opacity .4s;}
+#fh-hint span{display:block;text-align:center;font-size:1.1rem;margin-top:.3rem;animation:fhbob 1.6s infinite;}
+@keyframes fhbob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+#fh-rail{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:1001;}
+@media(prefers-reduced-motion:reduce){#fh-hint span{animation:none;}}
 </style>
 </head>
 <body>
@@ -1917,28 +1947,44 @@ footer {
   </ul>
 </nav>
 
+<!-- FLIGHT HERO (added) -->
+<section id="flight-hero">
+  <div id="flight-scene"></div>
+
+  <div class="fh-text" data-from="0" data-to="0.16">
+    <div class="fh-eyebrow">For Indian students · Class 2 to Class 12</div>
+    <h1>Your child will actually <em>remember</em> what they learn.</h1>
+    <p>An AI study companion that teaches the way the brain actually works — so today's lesson stays with them on exam day, and for years after.</p>
+    <div class="fh-actions">
+      <a class="p" href="#contact">Get Early Access</a>
+      <a class="g" href="#for-parents">See how it works</a>
+    </div>
+  </div>
+
+  <div class="fh-text" data-from="0.34" data-to="0.55">
+    <div class="fh-eyebrow">The domino cascade</div>
+    <h1>One unasked question <em>topples the next.</em></h1>
+  </div>
+
+  <div class="fh-text" data-from="0.72" data-to="1.02">
+    <div class="fh-eyebrow">We intercept at domino 0</div>
+    <h1>Caught the instant <em>confusion forms.</em></h1>
+  </div>
+
+  <div id="fh-hint">Scroll to enter<span>↓</span></div>
+  <div id="fh-rail"></div>
+</section>
+
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-eyebrow">🇮🇳 For Indian Students · Class 2 to Class 12</div>
-    <h1 class="hero-title">
-      Your Child Will Actually<br>
-      <span class="italic-violet">Remember</span> What<br>
-      They <span class="underline-accent">Learn</span>
+    <div class="hero-eyebrow">See it in action</div>
+    <h1 class="hero-title" style="font-size:clamp(1.9rem,4vw,3rem);">
+      This is how <span class="italic-violet">Vidya</span> teaches.
     </h1>
     <p class="hero-sub">
-      Vidya is an AI study companion that teaches the way the human brain actually works — so what your child studies today stays with them on exam day, next month, and years from now.
+      Never lectures. She starts with what your child already knows, then guides them to discover the answer themselves — because what you discover yourself, you never forget.
     </p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn-primary">
-        Get Early Access
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <a href="#for-parents" class="btn-ghost">
-        See how it works
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-    </div>
     <div class="hero-proof">
       <div class="proof-item">
         <span class="proof-num">2–12</span>
@@ -1964,12 +2010,12 @@ footer {
     <!-- Chat visual -->
     <div class="hero-visual">
       <div class="insight-card ic-1">
-        <div class="ic-label">🔥 Study Streak</div>
+        <div class="ic-label">Study Streak</div>
         <div class="ic-value ic-fire">23 Days</div>
         <div class="ic-sub">Personal best!</div>
       </div>
       <div class="insight-card ic-2">
-        <div class="ic-label">⭐ Today's Growth</div>
+        <div class="ic-label">Today's Growth</div>
         <div class="ic-value ic-accent">+340 XP</div>
         <div class="ic-sub">Deep Thinker badge earned</div>
       </div>
@@ -1985,14 +2031,14 @@ footer {
         <div class="chat-body">
           <div class="msg msg-vidya">
             Before we start — have you ever noticed that when you put mango in salt water, it shrinks? Today that exact thing is going to help you understand one of the most important processes in biology. 🥭
-            <div><span class="msg-tag">💡 Starts with what you already know</span></div>
+            <div><span class="msg-tag">Starts with what you already know</span></div>
           </div>
           <div class="msg msg-student">
             Yes! My grandmother does that when making pickle. The mango releases all its water.
           </div>
           <div class="msg msg-vidya">
             Exactly right. So the water moved from inside the mango to outside. Now — what do you think was different about the water inside versus the water with salt outside?
-            <div><span class="msg-tag">🧠 Guides you to discover, never just tells</span></div>
+            <div><span class="msg-tag">Guides you to discover, never just tells</span></div>
           </div>
           <div class="msg msg-student">
             The salt water outside is more... concentrated?
@@ -2238,7 +2284,7 @@ footer {
         <div class="student-visual">
           <div class="sv-top">
             <div class="sv-card">
-              <div class="sv-val sv-fire">🔥 23</div>
+              <div class="sv-val sv-fire">23</div>
               <div class="sv-label">Day Streak</div>
             </div>
             <div class="sv-card">
@@ -2258,10 +2304,10 @@ footer {
             <div class="sv-prog-label"><span>History</span><span>Level 4 of 6</span></div>
             <div class="sv-bar"><div class="sv-bar-fill" style="width:65%"></div></div>
             <div class="sv-badges">
-              <span class="sv-badge">🏅 Deep Thinker</span>
-              <span class="sv-badge">⚡ Early Bird</span>
-              <span class="sv-badge">🧠 Memory Master</span>
-              <span class="sv-badge">🎯 23-Day Scholar</span>
+              <span class="sv-badge">Deep Thinker</span>
+              <span class="sv-badge">Early Bird</span>
+              <span class="sv-badge">Memory Master</span>
+              <span class="sv-badge">23-Day Scholar</span>
             </div>
           </div>
         </div>
@@ -2316,7 +2362,7 @@ footer {
             <div class="dash-bar-bg"><div class="dash-bar-fill" style="width:65%"></div></div>
           </div>
           <div class="dash-insight">
-            ⚡ 20 of 34 students are struggling with Electricity — recommend dedicating Monday's class to this before moving forward
+            20 of 34 students are struggling with Electricity — recommend dedicating Monday's class to this before moving forward
           </div>
         </div>
       </div>
@@ -2430,7 +2476,7 @@ footer {
   <div class="supported-label">Supported By</div>
   <div class="supported-logos">
     <div class="supported-logo">
-      <div class="logo-icon">☁️</div>
+      <div class="logo-icon"></div>
       <div class="logo-name">Google Cloud</div>
     </div>
     <div class="supported-logo" style="opacity:0.3;">
@@ -2535,6 +2581,106 @@ function setMonthly() {
 }
 
 // Form submit
-function handleSubmit(e) {
+function handleSubmit(e){
   e.preventDefault();
-  const btn = e.target.querySelector(
+  var b = e.target.querySelector('.btn-primary, button[type="submit"], button');
+  if(b){ b.textContent = "Thank you — we'll reach out within 24 hours."; b.disabled = true; }
+  return false;
+}
+</script>
+
+<!-- FLIGHT HERO SCRIPT (added) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+  if(!window.THREE) return;
+  var reduced = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var host = document.getElementById('flight-scene');
+  var heroEl = document.getElementById('flight-hero');
+  if(!host || !heroEl) return;
+
+  var scene = new THREE.Scene();
+  scene.fog = new THREE.FogExp2(0x0B1220, 0.02);
+  var camera = new THREE.PerspectiveCamera(64, host.clientWidth/host.clientHeight, 0.1, 400);
+  var renderer = new THREE.WebGLRenderer({antialias:true, alpha:true});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+  renderer.setSize(host.clientWidth, host.clientHeight);
+  host.appendChild(renderer.domElement);
+
+  var path = new THREE.CatmullRomCurve3([
+    new THREE.Vector3(0,0,0),
+    new THREE.Vector3(3,-1,-45),
+    new THREE.Vector3(-4,2,-95),
+    new THREE.Vector3(2,-1,-145),
+    new THREE.Vector3(0,1,-195),
+    new THREE.Vector3(0,0,-225)
+  ]);
+
+  var g = new THREE.SphereGeometry(0.12,8,8);
+  var cool = new THREE.MeshBasicMaterial({color:0x6FA8C7});
+  var hot  = new THREE.MeshBasicMaterial({color:0xE8A33D});
+  var nodes=[];
+  for(var i=0;i<560;i++){
+    var z=-Math.random()*225, a=Math.random()*Math.PI*2;
+    var rW=6+Math.random()*16, rT=1.6+Math.random()*2.2;
+    var scatter=new THREE.Vector3(Math.cos(a)*rW, Math.sin(a)*rW*0.7, z);
+    var aligned=new THREE.Vector3(Math.cos(a)*rT, Math.sin(a)*rT*0.7, z);
+    var m=new THREE.Mesh(g, Math.random()<0.22?hot:cool);
+    scene.add(m); nodes.push({m:m,s:scatter,a:aligned});
+  }
+
+  var gm=new THREE.MeshBasicMaterial({color:0xE8A33D, transparent:true, opacity:0.5, wireframe:true});
+  [0.20,0.40,0.60,0.80].forEach(function(t,i){
+    var p=path.getPointAt(t), ahead=path.getPointAt(Math.min(t+0.01,1));
+    var ring=new THREE.Mesh(new THREE.TorusGeometry(5.4-i*0.5,0.13,8,44), gm);
+    ring.position.copy(p); ring.lookAt(ahead); scene.add(ring);
+  });
+
+  var goal=new THREE.Mesh(new THREE.SphereGeometry(2.6,24,24), new THREE.MeshBasicMaterial({color:0xF2EFE6}));
+  goal.position.copy(path.getPointAt(1)); scene.add(goal);
+  var halo=new THREE.Mesh(new THREE.SphereGeometry(4.6,24,24), new THREE.MeshBasicMaterial({color:0xE8A33D,transparent:true,opacity:0.12}));
+  halo.position.copy(goal.position); scene.add(halo);
+
+  var beats=[].slice.call(document.querySelectorAll('.fh-text'));
+  var hint=document.getElementById('fh-hint'), rail=document.getElementById('fh-rail');
+  var progress=0, target=0;
+
+  function onScroll(){
+    var r=heroEl.getBoundingClientRect();
+    var total=heroEl.offsetHeight-window.innerHeight;
+    var done=Math.min(Math.max(-r.top,0),total);
+    target=total>0?done/total:0;
+    var pinned=(r.top<=1 && r.bottom>=window.innerHeight-1);
+    hint.style.opacity=target>0.02?0:1;
+    rail.style.width=(target*100)+'%';
+    beats.forEach(function(b){
+      var show=pinned && target>=+b.dataset.from && target<+b.dataset.to;
+      b.classList.toggle('show', show);
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  var look=new THREE.Vector3();
+  function frame(){
+    progress += (target-progress)*(reduced?1:0.08);
+    var p=Math.min(Math.max(progress,0),1);
+    camera.position.copy(path.getPointAt(p));
+    look.copy(path.getPointAt(Math.min(p+0.03,1)));
+    camera.lookAt(look);
+    var align=Math.min(Math.max((p-0.25)/0.55,0),1);
+    for(var i=0;i<nodes.length;i++) nodes[i].m.position.lerpVectors(nodes[i].s, nodes[i].a, align);
+    halo.material.opacity=0.10+p*0.30;
+    goal.scale.setScalar(0.6+p*0.9);
+    renderer.render(scene,camera);
+    requestAnimationFrame(frame);
+  }
+  onScroll(); frame();
+
+  window.addEventListener('resize', function(){
+    camera.aspect=host.clientWidth/host.clientHeight; camera.updateProjectionMatrix();
+    renderer.setSize(host.clientWidth, host.clientHeight);
+  });
+})();
+</script>
+</body>
+</html>
