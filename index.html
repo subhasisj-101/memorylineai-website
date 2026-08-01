@@ -366,7 +366,7 @@ nav {
 .chat-board-badge {
   background: rgba(28,78,107,0.2);
   border: 1px solid rgba(28,78,107,0.3);
-  color: #c4b5fd;
+  color: #F2C98A;
   font-size: 0.6rem;
   font-weight: 700;
   padding: 0.2rem 0.6rem;
@@ -415,7 +415,7 @@ nav {
   gap: 0.3rem;
   background: rgba(28,78,107,0.15);
   border: 1px solid rgba(28,78,107,0.25);
-  color: #a78bfa;
+  color: #F2C98A;
   font-size: 0.55rem;
   font-weight: 700;
   padding: 0.2rem 0.5rem;
@@ -1190,7 +1190,7 @@ section { padding: 7rem 5%; }
 }
 
 .dash-bar-fill.warn {
-  background: linear-gradient(90deg, #f59e0b, #ef4444);
+  background: linear-gradient(90deg, #D98A2B, #ef4444);
 }
 
 .dash-insight {
@@ -1235,7 +1235,7 @@ section { padding: 7rem 5%; }
 }
 
 .sv-card .sv-fire { color: var(--accent); }
-.sv-card .sv-xp { color: #c4b5fd; }
+.sv-card .sv-xp { color: #F2C98A; }
 
 .sv-card .sv-label {
   font-size: 0.58rem;
@@ -1285,7 +1285,7 @@ section { padding: 7rem 5%; }
 .sv-badge {
   background: rgba(28,78,107,0.15);
   border: 1px solid rgba(28,78,107,0.25);
-  color: #c4b5fd;
+  color: #F2C98A;
   font-size: 0.55rem;
   font-weight: 700;
   padding: 0.25rem 0.6rem;
@@ -1460,7 +1460,7 @@ section { padding: 7rem 5%; }
 }
 
 .price-features li.annual-only {
-  color: #c4b5fd;
+  color: #F2C98A;
 }
 
 .price-features li.annual-only::before { color: var(--accent-gold); }
@@ -1593,8 +1593,8 @@ body.monthly .annual-only::after { content: ' (Annual only)'; font-size: 0.6rem;
   text-align: center;
 }
 
-.contact-section .section-eyebrow { color: #c4b5fd; justify-content: center; }
-.contact-section .section-eyebrow::before { background: #c4b5fd; }
+.contact-section .section-eyebrow { color: var(--accent); justify-content: center; }
+.contact-section .section-eyebrow::before { background: var(--accent); }
 .contact-section .section-title { color: white; }
 .contact-section .section-body { color: rgba(255,255,255,0.5); margin: 0 auto 3rem; text-align: center; }
 
@@ -1931,6 +1931,30 @@ footer {
 @keyframes fhbob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
 #fh-rail{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:1001;}
 @media(prefers-reduced-motion:reduce){#fh-hint span{animation:none;}}
+
+
+/* ── PINNED 3D CASCADE (added) ── */
+#cascade3d{height:600vh;position:relative;background:var(--deep);}
+#cascade3d-scene{position:sticky;top:0;height:100vh;width:100%;overflow:hidden;}
+#cascade3d-scene canvas{display:block;}
+.cc-beat{position:fixed;left:0;right:0;top:16%;z-index:3;display:flex;flex-direction:column;
+  align-items:center;text-align:center;padding:0 24px;pointer-events:none;opacity:0;
+  transition:opacity .45s ease;font-family:'Outfit',sans-serif;}
+.cc-beat.show{opacity:1;}
+.cc-num{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--accent);
+  font-weight:700;margin-bottom:.75rem;}
+.cc-beat h3{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,4.6vw,3.4rem);
+  line-height:1.05;font-weight:800;max-width:15ch;letter-spacing:-.02em;color:#fff;margin:0;}
+.cc-beat h3 em{color:var(--accent);font-style:italic;}
+.cc-beat p{margin-top:.9rem;font-size:clamp(1rem,2vw,1.2rem);max-width:34ch;
+  color:rgba(255,255,255,0.6);line-height:1.5;}
+#cc-rail{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:1001;opacity:0;transition:opacity .3s;}
+#cc-hint{position:fixed;bottom:1.6rem;left:50%;transform:translateX(-50%);z-index:4;
+  font-family:'Outfit',sans-serif;font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;
+  color:#8a94a8;opacity:0;transition:opacity .4s;}
+#cc-hint span{display:block;text-align:center;font-size:1.1rem;margin-top:.3rem;animation:ccbob 1.6s infinite;}
+@keyframes ccbob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+@media(prefers-reduced-motion:reduce){#cc-hint span{animation:none;}}
 </style>
 </head>
 <body>
@@ -1961,12 +1985,7 @@ footer {
     </div>
   </div>
 
-  <div class="fh-text" data-from="0.34" data-to="0.55">
-    <div class="fh-eyebrow">The domino cascade</div>
-    <h1>One unasked question <em>topples the next.</em></h1>
-  </div>
-
-  <div class="fh-text" data-from="0.72" data-to="1.02">
+  <div class="fh-text" data-from="0.6" data-to="1.02">
     <div class="fh-eyebrow">We intercept at domino 0</div>
     <h1>Caught the instant <em>confusion forms.</em></h1>
   </div>
@@ -2079,7 +2098,7 @@ footer {
       </div>
       <h2 class="section-title" style="text-align:center;color:white;max-width:820px;margin:0 auto 2rem;">
         Educational failure is not random.<br>
-        <em style="color:#f97316;">It follows a predictable cascade.</em>
+        <em style="color:#E8A33D;">It follows a predictable cascade.</em>
       </h2>
       <p style="text-align:center;font-size:1.1rem;color:rgba(255,255,255,0.55);max-width:680px;margin:0 auto 4rem;line-height:1.8;font-weight:300;">
         It begins with a single moment of silent confusion and ends with identity damage and systemic waste. Curiosity is replaced by self-preservation. The system does not fail because students are incapable. The system fails because it has no mechanism to intercept at the root.
@@ -2087,7 +2106,7 @@ footer {
     </div>
 
     <!-- Riya story -->
-    <div class="riya-block scroll-reveal">
+    <div class="riya-block scroll-reveal" style="grid-template-columns:1fr;max-width:760px;margin-left:auto;margin-right:auto;">
       <div class="riya-left">
         <div class="riya-eyebrow">A Story You Already Know</div>
         <h3 class="riya-title">Meet Riya.<br>She had <em>one question</em><br>she never asked.</h3>
@@ -2105,65 +2124,58 @@ footer {
           If Riya's story is just 1% true for just 1% of India's 26.5 crore school students — that is 26.5 lakh children experiencing avoidable learning cascades right now. That is not a statistic. That is a national emergency disguised as normal.
         </div>
       </div>
-      <div class="riya-right">
-        <div class="cascade-visual">
-          <div class="cascade-title">The Cascade</div>
-          <div class="domino-chain">
-            <div class="domino-item active">
-              <div class="domino-dot"></div>
-              <div class="domino-content">
-                <div class="domino-label">The Unasked Question</div>
-                <div class="domino-desc">Silent confusion in the classroom</div>
-              </div>
-            </div>
-            <div class="domino-arrow">↓</div>
-            <div class="domino-item">
-              <div class="domino-dot"></div>
-              <div class="domino-content">
-                <div class="domino-label">The Isolated Struggle</div>
-                <div class="domino-desc">Homework becomes impossible</div>
-              </div>
-            </div>
-            <div class="domino-arrow">↓</div>
-            <div class="domino-item">
-              <div class="domino-dot"></div>
-              <div class="domino-content">
-                <div class="domino-label">The Information Chaos</div>
-                <div class="domino-desc">38 million YouTube results, zero clarity</div>
-              </div>
-            </div>
-            <div class="domino-arrow">↓</div>
-            <div class="domino-item">
-              <div class="domino-dot"></div>
-              <div class="domino-content">
-                <div class="domino-label">The First Public Failure</div>
-                <div class="domino-desc">Assessment as verdict, not diagnosis</div>
-              </div>
-            </div>
-            <div class="domino-arrow">↓</div>
-            <div class="domino-item">
-              <div class="domino-dot"></div>
-              <div class="domino-content">
-                <div class="domino-label">The Curriculum Collapse</div>
-                <div class="domino-desc">Every topic built on the broken one fails</div>
-              </div>
-            </div>
-            <div class="domino-arrow">↓</div>
-            <div class="domino-item danger">
-              <div class="domino-dot"></div>
-              <div class="domino-content">
-                <div class="domino-label">The Identity Collapse</div>
-                <div class="domino-desc">"I am just not a science person."</div>
-              </div>
-            </div>
-          </div>
-          <div class="cascade-intercept">
-            <div class="intercept-line"></div>
-            <div class="intercept-label">MemoryLineAI intercepts here — at Domino 0</div>
-          </div>
-        </div>
-      </div>
     </div>
+
+    </div>
+  </section>
+
+  <!-- PINNED 3D CASCADE (added) -->
+  <section id="cascade3d">
+    <div id="cascade3d-scene"></div>
+
+    <div class="cc-beat" data-from="0.00" data-to="0.14">
+      <div class="cc-num">Domino 01</div>
+      <h3>The unasked <em>question.</em></h3>
+      <p>Silent confusion in the classroom. A hand that goes back down.</p>
+    </div>
+    <div class="cc-beat" data-from="0.14" data-to="0.28">
+      <div class="cc-num">Domino 02</div>
+      <h3>The isolated <em>struggle.</em></h3>
+      <p>Homework becomes impossible. No one to ask.</p>
+    </div>
+    <div class="cc-beat" data-from="0.28" data-to="0.42">
+      <div class="cc-num">Domino 03</div>
+      <h3>The information <em>chaos.</em></h3>
+      <p>38 million results. Zero clarity.</p>
+    </div>
+    <div class="cc-beat" data-from="0.42" data-to="0.56">
+      <div class="cc-num">Domino 04</div>
+      <h3>The first public <em>failure.</em></h3>
+      <p>Assessment becomes a verdict, not a diagnosis.</p>
+    </div>
+    <div class="cc-beat" data-from="0.56" data-to="0.66">
+      <div class="cc-num">Domino 05</div>
+      <h3>The curriculum <em>collapse.</em></h3>
+      <p>Every topic built on the broken one fails.</p>
+    </div>
+    <div class="cc-beat" data-from="0.70" data-to="0.86">
+      <div class="cc-num">Intercept · Domino 0</div>
+      <h3>Caught at <em>the root.</em></h3>
+      <p>The instant confusion forms — privately, without judgment.</p>
+    </div>
+    <div class="cc-beat" data-from="0.88" data-to="1.02">
+      <div class="cc-num">No cascade</div>
+      <h3>Identity, <em>intact.</em></h3>
+      <p>The last domino never falls.</p>
+    </div>
+
+    <div id="cc-hint">Scroll<span>↓</span></div>
+    <div id="cc-rail"></div>
+  </section>
+
+  <!-- SOLUTION (dark) -->
+  <section class="domino-section">
+    <div class="container">
 
     <!-- The solution statement -->
     <div class="solution-statement scroll-reveal">
@@ -2522,12 +2534,20 @@ footer {
         <div class="meta-val"><a href="mailto:subhasisj@memorylineai.com">subhasisj@memorylineai.com</a></div>
       </div>
       <div class="meta-item">
+        <div class="meta-label">Phone</div>
+        <div class="meta-val"><a href="tel:+919348008139">+91 93480 08139</a></div>
+      </div>
+      <div class="meta-item">
         <div class="meta-label">Based In</div>
         <div class="meta-val">Bhubaneswar, Odisha</div>
       </div>
       <div class="meta-item">
         <div class="meta-label">Pilot Launch</div>
         <div class="meta-val">Mid 2026 · Applications Open Now</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Patent</div>
+        <div class="meta-val">Indian Patent Application No. 202531115418</div>
       </div>
     </div>
   </div>
@@ -2543,7 +2563,7 @@ footer {
     <li><a href="#pricing">Pricing</a></li>
     <li><a href="mailto:subhasisj@memorylineai.com">Contact</a></li>
   </ul>
-  <div class="footer-copy">© 2026 MemoryLineAI · Bhubaneswar, Odisha · Built for India</div>
+  <div class="footer-copy">© 2026 MemoryLineAI · Bhubaneswar, Odisha · Built for India · Indian Patent Application No. 202531115418</div>
 </footer>
 
 <script>
@@ -2652,6 +2672,7 @@ function handleSubmit(e){
     target=total>0?done/total:0;
     var pinned=(r.top<=1 && r.bottom>=window.innerHeight-1);
     hint.style.opacity=target>0.02?0:1;
+    rail.style.opacity=(r.bottom>0 && r.top<window.innerHeight)?1:0;
     rail.style.width=(target*100)+'%';
     beats.forEach(function(b){
       var show=pinned && target>=+b.dataset.from && target<+b.dataset.to;
@@ -2680,6 +2701,99 @@ function handleSubmit(e){
     camera.aspect=host.clientWidth/host.clientHeight; camera.updateProjectionMatrix();
     renderer.setSize(host.clientWidth, host.clientHeight);
   });
+})();
+</script>
+
+
+<!-- PINNED 3D CASCADE SCRIPT (added) -->
+<script>
+(function(){
+  function boot(){
+    if(!window.THREE){ return setTimeout(boot,120); }
+    var host=document.getElementById('cascade3d-scene');
+    var sec=document.getElementById('cascade3d');
+    if(!host||!sec) return;
+    var reduced=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+    var scene=new THREE.Scene();
+    scene.fog=new THREE.FogExp2(0x0B1220,0.028);
+    var camera=new THREE.PerspectiveCamera(55, host.clientWidth/host.clientHeight,0.1,200);
+    var renderer=new THREE.WebGLRenderer({antialias:true,alpha:true});
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+    renderer.setSize(host.clientWidth,host.clientHeight);
+    host.appendChild(renderer.domElement);
+
+    scene.add(new THREE.AmbientLight(0x25324a,1.0));
+    var key=new THREE.DirectionalLight(0xffffff,1.1); key.position.set(-6,10,8); scene.add(key);
+    var amberLight=new THREE.PointLight(0xE8A33D,0,30); scene.add(amberLight);
+
+    var ground=new THREE.Mesh(new THREE.PlaneGeometry(200,200),
+      new THREE.MeshStandardMaterial({color:0x0f1a2e,roughness:1}));
+    ground.rotation.x=-Math.PI/2; scene.add(ground);
+
+    var DX=4.2,N=6,H=3.4,W=0.55,D=2.2,startX=-(N-1)*DX/2;
+    var geoD=new THREE.BoxGeometry(W,H,D);
+    var dominoes=[];
+    for(var i=0;i<N;i++){
+      var saved=(i===N-1);
+      var grp=new THREE.Group(); grp.position.set(startX+i*DX,0,0);
+      var mat=new THREE.MeshStandardMaterial({color:saved?0xE8A33D:0xF2EFE6,
+        emissive:saved?0x3a2405:0x000000,roughness:0.55,metalness:0.05});
+      var mesh=new THREE.Mesh(geoD,mat); mesh.position.y=H/2; grp.add(mesh); scene.add(grp);
+      dominoes.push({grp:grp,mat:mat,saved:saved});
+    }
+    var barrier=new THREE.Mesh(new THREE.BoxGeometry(0.35,5,D+1.4),
+      new THREE.MeshStandardMaterial({color:0xE8A33D,transparent:true,opacity:0.85,
+      emissive:0x7a4a10,roughness:0.4}));
+    barrier.position.set(startX+(N-1)*DX-DX*0.5,0,0); barrier.scale.y=0.001; scene.add(barrier);
+
+    var beats=[].slice.call(document.querySelectorAll('.cc-beat'));
+    var hint=document.getElementById('cc-hint'), rail=document.getElementById('cc-rail');
+    var progress=0,target=0;
+    function onScroll(){
+      var r=sec.getBoundingClientRect();
+      var total=sec.offsetHeight-window.innerHeight;
+      var done=Math.min(Math.max(-r.top,0),total);
+      target=total>0?done/total:0;
+      var pinned=(r.top<=1 && r.bottom>=window.innerHeight-1);
+      var vis=(r.bottom>0 && r.top<window.innerHeight);
+      hint.style.opacity=(pinned && target<0.03)?1:0;
+      rail.style.opacity=vis?1:0; rail.style.width=(target*100)+'%';
+      beats.forEach(function(b){
+        b.classList.toggle('show', pinned && target>=+b.dataset.from && target<+b.dataset.to);
+      });
+    }
+    window.addEventListener('scroll',onScroll,{passive:true});
+    window.addEventListener('resize',function(){
+      camera.aspect=host.clientWidth/host.clientHeight; camera.updateProjectionMatrix();
+      renderer.setSize(host.clientWidth,host.clientHeight); onScroll();
+    });
+
+    var ease=function(t){return t<0.5?2*t*t:1-Math.pow(-2*t+2,2)/2;};
+    var camX=startX, look=new THREE.Vector3();
+    function frame(){
+      progress+=(target-progress)*(reduced?1:0.09);
+      var p=Math.min(Math.max(progress,0),1);
+      for(var i=0;i<N-1;i++){
+        var s=0.02+i*0.135,e=s+0.14;
+        var k=ease(Math.min(Math.max((p-s)/(e-s),0),1));
+        dominoes[i].grp.rotation.z=-1.38*k;
+      }
+      var bRise=Math.min(Math.max((p-0.60)/0.14,0),1);
+      barrier.scale.y=0.001+bRise;
+      amberLight.position.set(barrier.position.x,3,4); amberLight.intensity=bRise*2.4;
+      var sv=dominoes[N-1];
+      sv.grp.rotation.z=Math.sin(p*8)*(1-bRise)*0.03;
+      sv.mat.emissive.setHex(bRise>0.4?0x7a4a10:0x3a2405);
+      var focus=Math.min(p*(N-1),N-1), fx=startX+focus*DX;
+      camX+=(fx-camX)*0.08;
+      camera.position.set(camX+3.5,5.2,11); look.set(camX,1.4,0); camera.lookAt(look);
+      renderer.render(scene,camera);
+      requestAnimationFrame(frame);
+    }
+    onScroll(); frame();
+  }
+  boot();
 })();
 </script>
 </body>
